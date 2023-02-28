@@ -19,7 +19,7 @@ export const Flow = () => {
           <option key="saturday" value="6">6</option>
           <option key="sunday" value="7">7</option>
         </select>
-        <div>Selected day is <strong>{dayName}</strong></div>
+        <div>Selected day is <strong style={{textTransform: 'capitalize', color: 'red'}}>{dayName}</strong></div>
       </div>
       <hr />
       <div>
