@@ -4,30 +4,24 @@ import { useState } from "react"
 ////
 
 const getDayNameByNumber = (dayNumber: number): string => {
-  let dayName = ''
-  if (dayNumber === 1) {
-    dayName = 'monday'
+  switch (dayNumber) {
+    case 1:
+      return 'monday'
+    case 2:
+      return 'tuesday'
+    case 3:
+      return 'wednesday'
+    case 4:
+      return 'thursday'
+    case 5:
+      return 'friday'
+    case 6:
+      return 'saturday'
+    case 7:
+      return 'sunday'
+    default:
+      return 'I don\'t know...'
   }
-  if (dayNumber === 2) {
-    dayName = 'tuesday'
-  }
-  if (dayNumber === 3) {
-    dayName = 'wednesday'
-  }
-  if (dayNumber === 4) {
-    dayName = 'thursday'
-  }
-  if (dayNumber === 5) {
-    dayName = 'friday'
-  }
-  if (dayNumber === 6) {
-    dayName = 'saturday'
-  }
-  if (dayNumber === 7) {
-    dayName = 'sunday'
-  }
-
-  return `${dayName}!` 
 } 
 
 /////
