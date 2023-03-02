@@ -3,8 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Flow } from "./Tasks/Flow";
+import { Flow } from "./Tasks/Flow/Flow";
 import { Home } from "./Home";
+import { Objects } from "./Tasks/Objects/Objects";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/flow",
     element: <Flow />,
+  },
+  {
+    path: "/objects",
+    element: <Objects />,
   },
 ]);
 
