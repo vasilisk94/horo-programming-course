@@ -2,8 +2,12 @@ import { useState } from "react";
 
 const prices = [1, 4, 5, 2, 6];
 
-const getTotalPrice = (prices: number[]): number => {
-  return 0
+const getTotalPrice = (costs: number[]): number => {
+  let sumElem = 0
+  for (let i = 0; i < costs.length; i++) {
+    sumElem += costs[i]
+  }
+  return sumElem
 }
 
 export const useArrays = () => {
