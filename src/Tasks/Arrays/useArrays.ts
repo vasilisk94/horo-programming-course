@@ -10,11 +10,17 @@ const prices = [1, 4, 5, 2, 6];
 //   return sumElem
 // }
 
+// const getTotalPrice = (costs: number[]): number => {
+//   let sumElem = 0
+//   for (let cost of costs) {
+//     sumElem += cost
+//   }
+//   return sumElem
+// }
+
 const getTotalPrice = (costs: number[]): number => {
   let sumElem = 0
-  for (let cost of costs) {
-    sumElem += cost
-  }
+  costs.forEach((cost) => {sumElem += cost})
   return sumElem
 }
 
