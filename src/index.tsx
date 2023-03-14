@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Flow } from "./Tasks/Flow/Flow";
 import { Home } from "./Home";
 import { Objects } from "./Tasks/Objects/Objects";
+import { Arrays } from "./Tasks/Arrays/Arrays";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/objects",
     element: <Objects />,
+  },
+  {
+    path: "/arrays",
+    element: <Arrays />,
   },
 ]);
 
