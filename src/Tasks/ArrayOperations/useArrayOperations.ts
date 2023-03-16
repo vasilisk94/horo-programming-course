@@ -62,6 +62,7 @@ const updProducts = products.map(function(product) {
     name: product.name,
     price: Math.round(product.price),
     icon: categoryIcon,
+    category: product.category,
   }
 })
 
@@ -69,31 +70,25 @@ export const useArrayOperations = () => {
   const [stateProducts, setStateProducts] = useState(updProducts)
 
   const filterFruits = () => {
-    const filteredProducts = stateProducts.filter(() => {
-      // implement filter by fruit here
-      return false
+    const filteredProducts = updProducts.filter((product) => {
+      return product.category === Category.fruit
     })
-
     // NOTE: don't touch this
     setStateProducts(filteredProducts)
   }
 
   const filterVegetables = () => {
-    const filteredProducts = stateProducts.filter(() => {
-      // implement filter by vegetable here
-      return false
+    const filteredProducts = updProducts.filter((product) => {
+      return product.category === Category.vegatable
     })
-
     // NOTE: don't touch this
     setStateProducts(filteredProducts)
   }
 
   const filterDrinks = () => {
-    const filteredProducts = stateProducts.filter(() => {
-      // implement filter by drink here
-      return false
+    const filteredProducts = updProducts.filter((product) => {
+      return product.category === Category.drink
     })
-
     // NOTE: don't touch this
     setStateProducts(filteredProducts)
   }
