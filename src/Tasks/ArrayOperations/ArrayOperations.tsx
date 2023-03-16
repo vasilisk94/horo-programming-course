@@ -16,7 +16,7 @@ export const ArrayOperations = () => {
       <div>
         <h2>Products</h2>
         <ul>
-          {products.map(({ name, price }) => (<li key={name}>{name} === {price}</li>))}
+          {products.map(({ name, price, icon }) => (<li key={name}>{name} ${price} {icon}</li>))}
         </ul>
         <Link to="/">Home</Link>
       </div>
