@@ -35,9 +35,16 @@ const products: Product[] = [
   }
 ];
 
+const updProducts = products.map(function(product) {
+  return {
+    name: product.name,
+    price: Math.round(product.price),
+    category: product.category,
+  }
+})
 
 export const useArrayOperations = () => {
   return {
-    products
+    products: updProducts 
   };
 };
