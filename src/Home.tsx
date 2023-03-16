@@ -9,8 +9,11 @@ export const Home = () => {
       <li key="objects">
         <Link to="/objects">Objects</Link>
       </li>
-      <li key="objects">
+      <li key="arrays">
         <Link to="/arrays">Arrays</Link>
+      </li>
+      <li key="array-operations">
+        <Link to="/array-operations">Array Operations</Link>
       </li>
     </ul>
   );

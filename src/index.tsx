@@ -7,6 +7,7 @@ import { Flow } from "./Tasks/Flow/Flow";
 import { Home } from "./Home";
 import { Objects } from "./Tasks/Objects/Objects";
 import { Arrays } from "./Tasks/Arrays/Arrays";
+import { ArrayOperations } from "./Tasks/ArrayOperations/ArrayOperations";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/arrays",
     element: <Arrays />,
+  },
+  {
+    path: "/array-operations",
+    element: <ArrayOperations />,
   },
 ]);
 
