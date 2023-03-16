@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 import { useArrayOperations } from "./useArrayOperations";
 
 export const ArrayOperations = () => {
-  const { products } = useArrayOperations();
+  const { products, filterFruits, filterVegetables, filterDrinks, showAll } = useArrayOperations();
 
   return (
     <>
       <h1>Array Operations</h1>
       <div>
-        <button>All</button>
-        <button>Fruits</button>
-        <button>Vegetables</button>
-        <button>Drinks</button>
+        <button onClick={showAll}>All</button>
+        <button onClick={filterFruits}>Fruits</button>
+        <button onClick={filterVegetables}>Vegetables</button>
+        <button onClick={filterDrinks}>Drinks</button>
       </div>
       <div>
         <h2>Products</h2>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 enum Category {
   fruit = 'fruit', 
   vegatable = 'vegatable', 
@@ -12,10 +11,6 @@ type Product = {
   price: number,
   category: Category,
 }
-
-// 🍎
-// 🥒
-// 🍾
 
 const products: Product[] = [
   {
@@ -71,7 +66,47 @@ const updProducts = products.map(function(product) {
 })
 
 export const useArrayOperations = () => {
+  const [stateProducts, setStateProducts] = useState(updProducts)
+
+  const filterFruits = () => {
+    const filteredProducts = stateProducts.filter(() => {
+      // implement filter by fruit here
+      return false
+    })
+
+    // NOTE: don't touch this
+    setStateProducts(filteredProducts)
+  }
+
+  const filterVegetables = () => {
+    const filteredProducts = stateProducts.filter(() => {
+      // implement filter by vegetable here
+      return false
+    })
+
+    // NOTE: don't touch this
+    setStateProducts(filteredProducts)
+  }
+
+  const filterDrinks = () => {
+    const filteredProducts = stateProducts.filter(() => {
+      // implement filter by drink here
+      return false
+    })
+
+    // NOTE: don't touch this
+    setStateProducts(filteredProducts)
+  }
+
+  const showAll = () => {
+    setStateProducts(updProducts)
+  }
+
   return {
-    products: updProducts 
+    products: stateProducts,
+    filterFruits: filterFruits,
+    filterVegetables: filterVegetables,
+    filterDrinks: filterDrinks,
+    showAll: showAll
   };
 };
