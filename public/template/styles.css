@@ -1,0 +1,18 @@
+.header {
+  background: pink;
+  padding: 20px 10px;
+  height: 100px;
+  display: flex;
+}
+
+.header-left {
+  flex-basis: 300px;
+}
+
+.header-center {
+  flex-grow: 1;
+}
+
+.header-right {
+  flex-basis: 300px;
+}
