@@ -1,3 +1,12 @@
+html, body {
+  height: 100%;
+} 
+
+body {
+  display: flex;
+  flex-direction: column;
+} 
+
 .header {
   background: pink;
   padding: 20px 10px;
@@ -21,8 +30,8 @@
 .content {
   background: #E7E6E6;
   padding: 0px 10px;
-  height: 510px;
   display: flex;
+  flex-grow: 1;
 }
 
 .sidebar {
@@ -111,4 +120,11 @@
 
 .title-image {
   display: inline-block;
+}
+
+.footer {
+  height: 50px;
+  background-color: aquamarine;
+  padding-top: 20px;
+  text-align: center;
 }
